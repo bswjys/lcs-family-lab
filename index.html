@@ -306,6 +306,15 @@
     width:4px;height:4px;border-radius:50%;background:#C6CCD4;
   }
 
+  /* PC 넓은 화면: 백승우 대표 디렉터 이력 2단 배치 (모바일은 1단 유지) */
+  @media (min-width:700px){
+    #cv-baek .p-panel__body{column-count:2;column-gap:28px}
+    #cv-baek .cv{break-inside:avoid;page-break-inside:avoid}
+    #cv-baek .cv + .cv{margin-top:0}
+    #cv-baek .cv{margin-bottom:18px}
+    #cv-baek .cv:last-child{margin-bottom:0}
+  }
+
   /* ── 문의 ───────────────────────────────────────── */
   .contact-card{
     background:var(--surface);border-radius:28px;padding:26px;
