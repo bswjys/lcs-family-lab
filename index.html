@@ -316,10 +316,13 @@
     width:4px;height:4px;border-radius:50%;background:#C6CCD4;
   }
 
-  /* PC 넓은 화면: 백승우 대표 디렉터 이력 2단 배치 (모바일은 1단 유지) */
-  @media (min-width:700px){
-    #cv-baek .p-panel__body{column-count:2;column-gap:28px}
-    #cv-baek .cv{break-inside:avoid;page-break-inside:avoid}
+  /* PC 넓은 화면: 백승우 대표 디렉터 이력 2단 배치 (카드가 충분히 넓을 때만, 그 아래는 1단)
+     항목이 많은 '활동 이력'은 단 경계에서 자연스럽게 나뉘어 두 단 높이를 맞춘다. */
+  @media (min-width:1000px){
+    #cv-baek .p-panel__body{column-count:2;column-gap:26px;column-rule:1px solid #EEF1F4}
+    #cv-baek .cv{break-inside:auto;page-break-inside:auto}
+    #cv-baek .cv-title{break-after:avoid;page-break-after:avoid}
+    #cv-baek .cv-list li{break-inside:avoid;page-break-inside:avoid}
     #cv-baek .cv + .cv{margin-top:0}
     #cv-baek .cv{margin-bottom:18px}
     #cv-baek .cv:last-child{margin-bottom:0}
@@ -607,16 +610,27 @@
                       <li>신성대학교 보건계열 취업클리닉 코치</li>
                       <li>혜전대학교 임상병리과 모의면접관 및 코칭</li>
                       <li>로고스교회 청소년 특강</li>
-                      <li>양평 경로당 시니어 힐링 레크레이션 진행</li>
+                      <li>양평 경로당 시니어 힐링 레크리에이션 진행</li>
+                      <li>서울 광진구 노인복지관 미용봉사</li>
+                      <li>건국대 산대원 향장학과 KT&amp;G 협력동아리 팀장</li>
+                      <li>건국대학교 산업대학원 원우회장</li>
                       <li>보건복지부 100인의 아빠단 8기</li>
                       <li>식약처 식품의약품 안전모니터 7기</li>
+                    </ul>
+                  </div>
+                  <div class="cv">
+                    <h4 class="cv-title">해외/국내 단기선교</h4>
+                    <ul class="cv-list">
+                      <li>말레이시아 : 교회 및 지역 레크레이션과 공연 진행</li>
+                      <li>대만 선교 : 현지 교회 및 교육기관 레크레이션 진행</li>
+                      <li>제주 / 고성 : MC, 레크레이션, 건강 강좌</li>
                     </ul>
                   </div>
                   <div class="cv">
                     <h4 class="cv-title">칼럼 기고</h4>
                     <ul class="cv-list">
                       <li>타파웨어브랜즈 코리아 T라이프사보 건강칼럼</li>
-                      <li>한국건강관리협회 건강소식지 메디체크남녀건강수첩 칼럼</li>
+                      <li>한국건강관리협회 소식지 메디체크 남녀건강수첩 칼럼</li>
                     </ul>
                   </div>
                   <div class="cv">
@@ -624,7 +638,7 @@
                     <ul class="cv-list">
                       <li>의사신문 건국대병원 임상병리사 인터뷰</li>
                       <li>백군, 메디피아뉴스 / 후생신보 기사</li>
-                      <li>대전 KBS 라디오 주.사.위. 생방송 인터뷰 ('세계 손씻기의 날' 손씻기의 중요성에 대해서 전화 인터뷰)</li>
+                      <li>대전 KBS 라디오 주.사.위. 생방송 인터뷰 ('세계 손씻기의 날' 손씻기의 중요성)</li>
                     </ul>
                   </div>
                 </div>
